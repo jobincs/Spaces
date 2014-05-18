@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Maps V3 API Sample</title>
+<link rel="stylesheet" href="jqm.css" />
+<link rel="stylesheet" href="style.css" />
+<script src="jq.js"></script>
+<script src="jqm.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+</head>
+<body>
+<div data-role="page" data-control-title="Login" id="login-page" class="login">
+    <div role="main" class="ui-content" id="login-div">
+        <div class="ui-field-contain name" data-controltype="textinput">
+            <label for="username-login">
+                Username or Email
+            </label>
+            <input name="username-login" id="username-login" placeholder="" value=""
+            type="text" data-mini="true">
+        </div>
+        <div class="ui-field-contain name" data-controltype="textinput">
+            <label for="password-login">
+                Password
+            </label>
+            <input name="password-login" id="password-login" placeholder="" value=""
+            type="password" data-mini="true">
+        </div>
+        <input id="login-btn" type="submit" data-theme="b" value="Login" href="#home-page">
+        <div data-controltype="textblock">
+            <p style="text-align: center;">
+                <span style="color: rgb(153, 153, 153);">
+                    <span style="text-decoration: line-through;" data-mce-style="text-decoration: line-through;">
+                        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                    </span>
+                    or
+                    <span style="text-decoration: line-through;" data-mce-style="text-decoration: line-through;">
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                    </span>
+                </span>
+            </p>
+        </div>
+        <a href="#signup-page"><input id="signup-link" type="submit" value="Sign Up"></a>
+		
+    </div>
+</div>
+
+
+
+<div data-role="page" data-control-title="Signup" id="signup-page" style="background: url('http://www.evolvingpicture.com/wp-content/uploads/2013/06/map-pin-t.jpg') no-repeat"
+class="signup">
+    <div role="main" class="ui-content">
+        <div class="ui-field-contain name" data-controltype="textinput">
+            <label for="username-sign">
+                Username or Email
+            </label>
+            <input name="username-sign" id="username-sign" placeholder="" value=""
+            type="text" data-mini="true">
+        </div>
+        <div class="ui-field-contain name" data-controltype="textinput">
+            <label for="password-sign">
+                Password
+            </label>
+            <input name="password-sign" id="password-sign" placeholder="" value=""
+            type="password" data-mini="true">
+        </div>
+        <div class="ui-field-contain name" data-controltype="textinput">
+            <label for="textinput7">
+                Repeat Password
+            </label>
+            <input name="" id="textinput7" placeholder="" value="" type="password"
+            data-mini="true">
+        </div>
+        <a href="#home-page"><input id="signup-btn" type="submit" data-theme="b" value="Sign Up"></a>
+    </div>
+</div>
+
+
+
+<div data-role="page" data-control-title="Home" id="home-page" class="home">
+    <div role="main" class="ui-content">
+        <div id="nav" data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#menu-page" data-transition="none" data-theme="b" data-icon="bars">
+                    </a>
+                </li>
+                <li>
+                    <a href="#add-page" data-transition="fade" data-theme="b" data-icon="plus">
+                    </a>
+                </li>
+                <li>
+                    <a href="#home-page" data-transition="fade" data-theme="b" data-icon="search">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="need_text" data-controltype="textblock">
+            <p>
+                <span style="color: rgb(128, 128, 128);">
+                    <b>
+                        I need a space to
+                    </b>
+                </span>
+            </p>
+        </div>
+        <div class="ui-field-contain" data-controltype="selectmenu">
+            <select id="selectmenu2" name="">
+                <option value="pee">
+                    Pee
+                </option>
+                <option value="park-car">
+                    Park My Car
+                </option>
+                <option value="park-bike">
+                    Park My Bike
+                </option>
+                <option value="wifi">
+                    Browse The Web
+                </option>
+                <option value="pray">
+                    Pray
+                </option>
+                <option value="work">
+                    Work
+                </option>
+                <option value="shower">
+                    Take a Shower
+                </option>
+                <option value="store">
+                    Store My Bags
+                </option>
+            </select>
+        </div>
+        <a  href="page2.html" rel="external"> <input id="find-btn" type="submit" data-theme="b" value="Find"></a>
+    </div>
+</div>
+
+
+
+<div data-role="page" data-control-title="List" id="list-page" class="list">
+    <div role="main" class="ui-content">
+        <div data-role="navbar" data-iconpos="top" class="ui-state-persist">
+            <ul>
+                <li>
+                    <a href="#menu-page" data-transition="none" data-theme="b" data-icon="bars">
+                    </a>
+                </li>
+                <li>
+                    <a href="#add-page" data-transition="fade" data-theme="b" data-icon="plus">
+                    </a>
+                </li>
+                <li>
+                    <a href="#home-page" data-transition="fade" data-theme="b" data-icon="search">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-controltype="textblock">
+            <p style="text-align: center;">
+                <span style="color: rgb(128, 128, 128);" data-mce-style="color: #808080;">
+                    <b>
+                        Places around you
+                    </b>
+                </span>
+            </p>
+        </div>
+        <div data-controltype="textblock">
+            <p style="text-align: center;" data-mce-style="text-align: center;">
+                <span style="color: rgb(128, 128, 128); font-size: small;">
+                    We couldn't find your location, please enable GPS or set your location
+                    in the map.
+                </span>
+            </p>
+        </div>
+        <div id="map-canvas" style="width:100%; height:400px;"></div>
+        
+    </div>
+</div>
+
+
+
+<div data-role="page" data-control-title="Add" id="add-page" class="add">
+    <div role="main" class="ui-content">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#menu-page" data-transition="none" data-theme="b" data-icon="bars">
+                    </a>
+                </li>
+                <li>
+                    <a href="#add-page" data-transition="fade" data-theme="b" data-icon="plus">
+                    </a>
+                </li>
+                <li>
+                    <a href="#home-page" data-transition="fade" data-theme="b" data-icon="search">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-controltype="textblock">
+            <p style="text-align: left;">
+                <span style="color: rgb(128, 128, 128);" data-mce-style="color: #808080;">
+                    <b>
+                        Add a space
+                    </b>
+                </span>
+            </p>
+        </div>
+        <div class="ui-field-contain" data-controltype="textinput">
+            <label for="title">
+                Title
+            </label>
+            <input name="" id="title" placeholder="eg: my parking lot" value="" type="text"
+            data-mini="true">
+        </div>
+        <div class="ui-field-contain" data-controltype="textarea">
+            <label for="textarea1">
+                Description
+            </label>
+            <textarea name="" id="textarea1" placeholder="Optional" data-mini="true"></textarea>
+        </div>
+        <div data-controltype="textblock">
+            <p>
+                <strong>Location :</strong> lattitude :<strong id="latitude"></strong>
+			Longitude :<strong id="longitude"></strong>
+            </p>
+			
+			
+	<!-- <input id="latitude" type="text" value="" /> -->
+	
+	<!-- <input id="longitude" type="text" value="" /> -->
+        </div>
+        <div id="admap-canvas" style="width:100%; height:300px;"></div>
+		
+	
+
+        <a id="add-btn" href="#home-page" class="ui-btn ui-btn-b">
+            Add
+        </a>
+    </div>
+</div>
+
+
+
+<div data-role="page" data-control-title="Description" id="desc-page" class="desc">
+    <div role="main" class="ui-content">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#menu-page" data-transition="none" data-theme="b" data-icon="bars">
+                    </a>
+                </li>
+                <li>
+                    <a href="#add-page" data-transition="fade" data-theme="b" data-icon="plus">
+                    </a>
+                </li>
+                <li>
+                    <a href="#home-page" data-transition="fade" data-theme="b" data-icon="search">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-controltype="textblock">
+            <p style="text-align: center;">
+                <span style="color: rgb(128, 128, 128);" data-mce-style="color: #808080;">
+                    <b>
+                        Title of Place
+                    </b>
+                </span>
+            </p>
+        </div>
+        <div data-controltype="textblock">
+            <p style="text-align: center;" data-mce-style="text-align: center;">
+                <span style="color: rgb(128, 128, 128); font-size: small;">
+                    Description of Place
+                </span>
+            </p>
+        </div>
+        <div id="googlemapsjs1" class="google-map" style="width: 100%; height: 360px; margin-left: auto; margin-right: auto">
+        </div>
+        
+        <input id="find-btn" type="submit" data-theme="b" value="Get Directions">
+    </div>
+</div>
+
+
+
+<div data-role="page" data-control-title="Menu" data-theme="b" id="menu-page"
+class="menu">
+    <div role="main" class="ui-content">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#menu-page" data-transition="none" data-theme="b" data-icon="bars">
+                    </a>
+                </li>
+                <li>
+                    <a href="#add-page" data-transition="fade" data-theme="b" data-icon="plus">
+                    </a>
+                </li>
+                <li>
+                    <a href="#home-page" data-transition="fade" data-theme="b" data-icon="search">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+            <li data-theme="b">
+                <a href="#home-page" data-transition="slide">
+                    Find a Space
+                </a>
+            </li>
+            <li data-theme="b">
+                <a href="#add-page" data-transition="slide">
+                    Add New Space
+                </a>
+            </li>
+            <li data-theme="b">
+                <a href="#login-page" data-transition="slide">
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+#login-div{
+	padding-top: 210px;
+}
+#login-page{
+	background: url('bak.jpg') repeat-x;
+	background-position: center top;
+	
+}
+
+a{
+text-decoration:none;
+}
